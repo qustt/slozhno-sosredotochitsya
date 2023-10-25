@@ -173,6 +173,20 @@
   gap: 10px;
 }
 
+.section__description a {
+  cursor: pointer;
+  text-decoration: none;
+  text-shadow: 2px 2px 0px #FF0070; 
+}
+
+.section__description a:hover {
+  text-decoration: underline;
+}
+
+.section__description a:focus-visible {
+  border: 1px solid var(--card-description-color);
+}
+
 .section__description h3 {
   font-family: var(--main-font);
   font-size: var(--main-font-size);
@@ -210,7 +224,7 @@
 }
 
 .section__description_why {
-  max-width: 355px;
+  min-width: 355px;
 }
 
 .section_what {
@@ -233,6 +247,7 @@
 }
 
 @media screen and (min-width: 768px) {
+  /* Ниже стили для шапки */
   .decorated-zone {
     padding: 20px;
   }
@@ -260,9 +275,72 @@
     position: relative;
     right: 20px;
   }
+  /* Ниже стили для секций с текстом */
+  .section_why {
+    grid-template-columns: repeat(2, auto-fit);
+    grid-template-areas: 
+    "title_why description_why"
+    ". description_why";
+  }
+
+  .section__title_why {
+    grid-area: title_why;
+    min-width: 236px;
+    justify-self: center;
+  }
+
+  .section__description_why {
+    grid-area: description_why;
+    min-width: 472px;
+  }
+
+  .section:first-of-type {
+    margin-block-start: 60px;
+  }
+
+  .section {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-block-start: 80px;
+  }
+
+  .section__title_what {
+    grid-area: title_what;
+    max-width: 236px;
+  }
+
+  .section__description_what {
+    grid-area: description_what;
+  }
+  
+  .section_what {
+    grid-template-columns: repeat(2, auto-fit);
+    grid-template-areas: 
+    "title_what ."
+    "description_what description_what";
+  }
+
+  .section_how {
+    grid-template-columns: repeat(2, auto-fit);
+    grid-template-areas: 
+    "title_how description_how"
+    ". description_how";
+  }
+
+  .section__title_how {
+    grid-area: title_how;
+    min-width: 236px;
+    justify-self: center;
+  }
+
+  .section__description_how {
+    grid-area: description_how;
+    min-width: 472px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
+  /* Ниже стили для шапки */
   .header {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
@@ -301,5 +379,55 @@
    grid-area: menu;
    justify-self: center;
   }
-}
+  /* Ниже стили для секций с текстом */
+  .section__title_why {
+    min-width: 315px;
+  }
 
+  .section__description_why {
+    min-width: 648px;
+  }
+
+  /* Выстраиваю карточки в ряд в section__what с помощью grid */
+  .section__description_what {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(315px, max-content));
+    grid-template-rows: repeat(2, auto-fit);
+    column-gap: 20px;
+    row-gap: 10px;
+    grid-template-areas: 
+    "title-1 title-2 title-3"
+    "text-1 text-2 text-3";
+  }
+  .section__description__title_1 {
+    grid-area: title-1;
+  }
+
+  .section__description__text_1 {
+    grid-area: text-1;
+  }
+
+  .section__description__title_2 {
+    grid-area: title-2;
+  }
+
+  .section__description__text_2 {
+    grid-area: text-2;
+  }
+
+  .section__description__title_3 {
+    grid-area: title-3;
+  }
+
+  .section__description__text_3 {
+    grid-area: text-3;
+  }
+  .section__title_what {
+    max-width: 315px;
+  }
+
+  .section__title_how {
+    max-width: 315px;
+    justify-self: center;
+  }
+}
