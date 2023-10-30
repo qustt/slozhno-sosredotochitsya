@@ -4,11 +4,23 @@
 */
 
 :root {
-  --accent-color: #FF0070;
+  --accent-color: #ff0070;
   --main-color: #000028;
-  --main-font: 'IBM Plex Mono';
-  --main-font-size: 18px;
+  /* Header */
+  --header-title-color: #db00ff;
+  --header-title-shadow: 4px 4px 0px #ff0070;
+  --corner-color: #ff0070;
+  --header-description-color: #000028;
   --background-image: url(../images/cover-image-dark.png);
-  --header-title-color: #DB00FF;
+  /* Кнопки header*/
+  --button-color: #ff0070;
+  --button-hover-color: rgba(255, 0, 112, 0.4);
+  /* Секция с текстом */
+  --section-title-color: #ff0070;
+  --section-link-shadow: 2px 2px 0px #ff0070;
+  --title-decor-color: #000028;
   --card-description-color: #f1b2ce;
+  /* Шрифт */
+  --main-font: "IBM Plex Mono";
+  --main-font-size: 18px;
 }
