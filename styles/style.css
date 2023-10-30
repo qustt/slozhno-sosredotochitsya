@@ -21,7 +21,7 @@
   grid-template-rows: repeat(auto-fit);
 }
 
-.header::before {
+.decorated-zone::before {
   content: '';
   width: 25px;
   height: 25px;
@@ -30,7 +30,7 @@
   margin: 0 0 40px auto;
 }
 
-.header::after {
+.decorated-zone::after {
   content: '';
   width: 25px;
   height: 25px;
@@ -285,6 +285,27 @@
   grid-area: street;
 }
 
+/* Стили для footer */
+
+.footer {
+  display: grid;
+  grid grid-template-rows: repeat(3, auto);
+  margin-block-start: 40px;
+}
+
+.footer__title {
+  justify-self: center;
+  color: var(--header-title-color);
+  text-shadow: 2px 2px 0px var(--accent-color);
+  font-family: var(--main-font);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%;
+  margin-block-start: 211px;
+  margin-block-end: 219px;
+}
+
 @media screen and (width<768px) {
  .header__title{
   max-width: 355px;
@@ -434,6 +455,17 @@
   .gallery__image_street {
     grid-area: street;
   }
+
+  /* Ниже стили для footer */
+  .footer { 
+    margin-block-start: 60px;
+  }
+  
+  .footer__title {
+    margin-block-start: 378px;
+    margin-block-end: 386px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -536,5 +568,11 @@
 
   .gallery__title {
     margin-block-start: 80px;
+  }
+
+  /* Ниже стили для footer */
+  .footer__title {
+    margin-block-start: 234px;
+    margin-block-end: 243px;
   }
 }
