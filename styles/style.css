@@ -132,12 +132,12 @@
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--button-color);
+  outline: 1px solid var(--button-color);
   pointer-events: none;
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--button-hover-color);
+  outline: 1px solid var(--button-hover-color);
 }
 
 .header__theme-menu-button:focus-visible {
@@ -175,21 +175,21 @@
   gap: 10px;
 }
 
-.section__description a {
+.section__description__link {
   cursor: pointer;
   text-decoration: none;
   text-shadow: var(--section-link-shadow);
 }
 
-.section__description a:hover {
+.section__description__link:hover {
   text-decoration: underline;
 }
 
-.section__description a:focus-visible {
+.section__description__link:focus-visible {
   border: 1px solid var(--card-description-color);
 }
 
-.section__description h3 {
+.section__description__title {
   font-family: var(--main-font);
   font-size: var(--main-font-size);
   font-style: normal;
@@ -198,7 +198,7 @@
   text-align: left;
 }
 
-.section__description h4 {
+.section__description__span {
   font-family: var(--main-font);
   font-size: var(--main-font-size);
   font-style: normal;
@@ -207,11 +207,11 @@
   text-align: left;
 }
 
-.section__description h4:first-of-type {
+.section__description__span:first-of-type {
   margin-block-start: 10px;
 }
 
-.section__description p {
+.section__description__text {
   font-family: var(--main-font);
   font-size: var(--main-font-size);
   color: var(--card-description-color);
@@ -221,7 +221,7 @@
   margin-block-end: 10px;
 }
 
-.section__description p:last-of-type {
+.section__description__text:last-of-type {
   margin-block-end: 0;
 }
 
@@ -269,19 +269,19 @@
   justify-self: center;
 }
 
-.gallery__image_sunset {
+.gallery__image:nth-child(2) {
   grid-area: sunset;
 }
-.gallery__image_ice-cream {
+.gallery__image:nth-child(3) {
   grid-area: ice-cream;
 }
-.gallery__image_tape {
+.gallery__image:nth-child(4) {
   grid-area: tape;
 }
-.gallery__image_books {
+.gallery__image:nth-child(5) {
   grid-area: books;
 }
-.gallery__image_street {
+.gallery__image:nth-child(6) {
   grid-area: street;
 }
 
@@ -440,19 +440,19 @@
     min-height: 100%;
   }
 
-  .gallery__image_sunset {
+  .gallery__image:nth-child(2) {
     grid-area: sunset;
   }
-  .gallery__image_ice-cream {
+  .gallery__image:nth-child(3) {
     grid-area: ice-cream;
   }
-  .gallery__image_tape {
+  .gallery__image:nth-child(4) {
     grid-area: tape;
   }
-  .gallery__image_books {
+  .gallery__image:nth-child(5) {
     grid-area: books;
   }
-  .gallery__image_street {
+  .gallery__image:nth-child(6) {
     grid-area: street;
   }
 
